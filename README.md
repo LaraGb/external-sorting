@@ -1,6 +1,10 @@
 # Documentação do Projeto de Organização de Preços de Produtos
 
-![Visão do Protótipo](assets/view.jpeg)
+
+
+https://github.com/LaraGb/external-sorting/assets/89605044/a9d2f710-ca28-41e5-99a7-890a4e9bfa11
+
+
 
 ## Descrição do Projeto
 
