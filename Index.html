@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organize os Preços dos Produtos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch('process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('message').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('message').innerHTML = 'Ocorreu um erro: ' + error;
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Organize os Preços dos Produtos</h1>
+        <form method="post" onsubmit="submitForm(event)">
+            <div class="col">
+                <label for="input-order">Selecione a ordem de ordenação da ENTRADA:</label>
+            <select id="input-order" name="input-order">
+                <option value="random">Aleatória</option>
+        
+            </select>
+            </div>
+            <div class="col">
+                <label for="output-order">Selecione a ordem de ordenação da SAÍDA:</label>
+            <select id="output-order" name="output-order">
+                <option value="asc">Crescente</option>
+                <option value="desc">Decrescente</option>
+            </select>
+            </div>
+            <div id="message" class="message"></div>
+            <button class="submit-btn" type="submit">Ordenar</button>
+        </form>
+    </div>
+</body>
+</html>
