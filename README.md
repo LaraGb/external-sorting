@@ -2,7 +2,11 @@
 
 
 
-https://github.com/LaraGb/external-sorting/assets/89605044/a9d2f710-ca28-41e5-99a7-890a4e9bfa11
+
+https://github.com/LaraGb/external-sorting/assets/89605044/9d3dd35f-5f35-4b30-9fd8-470dd1d220cf
+
+
+
 
 
 
